@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         .canvas-container {
-            width: 800px;
+            width: 600px;
             margin: 0 auto;
             background-color: #ccc;
             border: 1px solid red;
@@ -15,13 +15,16 @@
 </head>
 <body>
     <div class="canvas-container">
-        <canvas height='600' width='800' id='field'>Обновите браузер</canvas>
+        <canvas height='400' width='600' id='field'>Обновите браузер</canvas>
     </div>
     <div class="buttons">
         <a href="javascript:void(0)" id="center">get  center</a>
         <a href="javascript:void(0)" id="move">move +5 px</a>
+        <a href="javascript:void(0)" id="start">Start Game</a>
+        <input type="text" id="name">
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/base.js"></script>
+<script src="js/player-canvas.js"></script>
 </html>

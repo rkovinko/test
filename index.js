@@ -9,7 +9,7 @@ const WebSocket = require('ws');
 const wss = new WebSocket.Server({ port: 5001 });
 
 let connectionsCount = 0;
-let connectionId = 1000000;
+let connectionId = 1000;
 
 let players = [];
 
@@ -19,7 +19,6 @@ wss.on('connection', function(ws){
     connectionsCount++;
     ws.id = uuidv1();
     connections[ws.id] = ws;
-
     ws.on('message', function incoming(message) {
         let response = JSON.parse(message);
         if (response.type == 'newPlayer') {
@@ -48,8 +47,6 @@ wss.on('connection', function(ws){
                 }
             });
         }
-
-
     });
 
 
